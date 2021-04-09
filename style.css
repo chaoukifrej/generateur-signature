@@ -1,0 +1,550 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  /*   font-family: 'Libre Baskerville', serif; */
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Variable */
+/* Mixin */
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 350px 2fr;
+      grid-template-columns: 350px 2fr;
+  justify-items: center;
+  overflow: hidden;
+}
+
+/* FORMULAIRE */
+.mainFormulaireContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #444054;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* Menu formulaire */
+.formulaireMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 70px;
+  background-color: #444054;
+}
+
+.formulaireMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 70px;
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.formulaireMenu ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 1rem;
+  height: 70px;
+  width: 50%;
+  border-right: 1px solid #2f243a;
+}
+
+.formulaireMenu ul li img {
+  margin: 5px;
+  height: 1.5rem;
+  -webkit-filter: invert(95%);
+          filter: invert(95%);
+}
+
+.formulaireMenu ul li:active {
+  background-color: #2f243a;
+}
+
+.liActive {
+  background-color: #2f243a;
+}
+
+/* container formulaire */
+.formulaireContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  overflow-y: scroll;
+}
+
+.formulaireContainer label {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: whitesmoke;
+  margin: 25px 0 0 50px;
+}
+
+.formulaireContainer #instagram {
+  margin-bottom: 70px;
+}
+
+.formulaireContainer h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.1em;
+  text-align: center;
+  margin: 40px 0 10px;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#bebbbb), to(white));
+  background-image: linear-gradient(to top, #bebbbb, white);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.formulaireContainer input {
+  color: whitesmoke;
+  font-size: 0.9em;
+  background-color: unset;
+  border: unset;
+  border-bottom: 2px solid whitesmoke;
+  margin: 0px 45px 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+.formulaireContainer input::-webkit-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.formulaireContainer input:-ms-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.formulaireContainer input::-ms-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.formulaireContainer input::placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.formulaireContainer input:focus {
+  outline: none;
+}
+
+/* container style */
+.styleContainer {
+  -webkit-box-shadow: inset 0px -1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px -1px 5px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+}
+
+.styleContainer label {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: whitesmoke;
+  margin: 25px 0 0 50px;
+}
+
+.styleContainer h3 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.1em;
+  text-align: center;
+  margin: 40px 0 10px;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#bebbbb), to(white));
+  background-image: linear-gradient(to top, #bebbbb, white);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.styleContainer .inputStyle {
+  color: whitesmoke;
+  text-align: center;
+  margin: 5px 45px 10px;
+}
+
+.styleContainer .inputStyle input[type="text"] {
+  color: whitesmoke;
+  width: 120px;
+  font-size: 0.9em;
+  background-color: unset;
+  border: unset;
+  padding: 5px 10px;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.styleContainer .inputStyle input[type="text"]::-webkit-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer .inputStyle input[type="text"]:-ms-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer .inputStyle input[type="text"]::-ms-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer .inputStyle input[type="text"]::placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer .inputStyle input[type="text"]:focus {
+  outline: none;
+}
+
+.styleContainer .inputStyle input[type="color"] {
+  position: relative;
+  top: 6px;
+  border: unset;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.styleContainer .inputStyle input[type="color"]:focus {
+  outline: none;
+}
+
+.styleContainer input[type="color" i] {
+  -webkit-appearance: unset;
+     -moz-appearance: unset;
+          appearance: unset;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+}
+
+.styleContainer #policeType {
+  background-color: #444054;
+  cursor: pointer;
+  color: whitesmoke;
+  border: none;
+  border-bottom: 2px solid whitesmoke;
+  margin: 20px 45px 10px;
+  padding: 2px;
+}
+
+.styleContainer #policeType:focus {
+  outline: none;
+}
+
+.styleContainer #policeType option {
+  background-color: #2f243a;
+}
+
+.styleContainer #taillePolice {
+  margin: 50px 45px 12px;
+  color: whitesmoke;
+  -webkit-appearance: none;
+  background: whitesmoke;
+  height: 2px;
+  cursor: pointer;
+}
+
+.styleContainer #taillePolice:focus {
+  outline: none;
+}
+
+.styleContainer input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  background: #2f243a;
+}
+
+.styleContainer datalist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: whitesmoke;
+  font-size: 0.8em;
+  bottom: 47px;
+  left: 3px;
+  margin: 0 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.styleContainer #photoProfil {
+  color: whitesmoke;
+  font-size: 0.9em;
+  background-color: unset;
+  border: unset;
+  border-bottom: 2px solid whitesmoke;
+  margin: 0px 45px 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+.styleContainer #photoProfil::-webkit-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer #photoProfil:-ms-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer #photoProfil::-ms-input-placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer #photoProfil::placeholder {
+  color: rgba(245, 243, 245, 0.7);
+}
+
+.styleContainer #photoProfil:focus {
+  outline: none;
+}
+
+/* ScrollBar */
+.formulaireContainer::-webkit-scrollbar {
+  width: 10px;
+  background-color: #2f243a;
+}
+
+.formulaireContainer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+.formulaireContainer::-webkit-scrollbar-thumb {
+  background-color: #bebbbb;
+  border-radius: 5px;
+}
+
+/* SIGNATURE */
+.signatureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2f243a;
+  -webkit-box-shadow: inset 1px 0 5px rgba(68, 68, 68, 0.8);
+          box-shadow: inset 1px 0 5px rgba(68, 68, 68, 0.8);
+  height: 100vh;
+  width: 100%;
+}
+
+.signatureContainer .titre {
+  font-size: 0.7em;
+  color: transparent;
+  position: absolute;
+  top: 20px;
+  left: 585px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fac9b8), to(#db8a74));
+  background-image: linear-gradient(to right, #fac9b8, #db8a74);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.signatureContainer .titre span::before {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 80px;
+  margin: 0 5px 4px 10px;
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#bebbbb), to(#444054));
+  background-image: linear-gradient(to right, #bebbbb, #444054);
+}
+
+.fenetre {
+  background-color: #444054;
+  height: 100px;
+  border-radius: 10px 10px 0 0;
+}
+
+.fenetre .btnFenetreContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(245, 243, 245, 0.3);
+}
+
+.fenetre .btnFenetreContainer .btnFenetre {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  margin: 10px 4px 0 0;
+}
+
+.fenetre .btnFenetreContainer .b1 {
+  background-color: #f5f3f5;
+  border: 6px solid #f5f3f5;
+}
+
+.fenetre .btnFenetreContainer .b2 {
+  background-color: #bebbbb;
+  border: 6px solid #bebbbb;
+}
+
+.fenetre .btnFenetreContainer .b3 {
+  margin-right: 7px;
+  background-color: #477dd4;
+  border: 6px solid #477dd4;
+}
+
+.fenetre .fenetreContent {
+  color: whitesmoke;
+  font-size: 0.8em;
+  margin: 15px 25px;
+}
+
+.fenetre .fenetreContent span {
+  font-weight: bolder;
+}
+
+.tableSignature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: whitesmoke;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  height: 350px;
+  width: 700px;
+  padding: 5vh;
+}
+
+/* Bouton de creation de la signature */
+.creerSignature {
+  position: relative;
+  top: 40px;
+}
+
+#creerSignature {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #db8a74;
+  color: whitesmoke;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+}
+
+#creerSignature:focus {
+  outline: none;
+}
+
+#creerSignature:hover {
+  background-color: #d1684b;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+#creerSignature:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+/* Signature crée */
+#signCreer {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: 117.5px;
+  height: 430.5px;
+  width: 780px;
+  background-color: whitesmoke;
+  margin: 100px 50px 50px;
+  border-radius: 0 0 5px 10px;
+}
+
+/* ScrollBar */
+#signCreer::-webkit-scrollbar {
+  width: 10px;
+  background-color: #2f243a;
+}
+
+#signCreer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
+          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
+}
+
+#signCreer::-webkit-scrollbar-thumb {
+  background-color: #bebbbb;
+  border-radius: 5px;
+}
+
+/* JS ACTION - DO NOT REMOVE */
+.displayNone {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

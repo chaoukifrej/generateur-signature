@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Generateur de signature</title>
+</head>
+
+<body>
+  <div class="main">
+    <div class="mainFormulaireContainer">
+      <div class="formulaireMenu">
+        <ul>
+          <li id="btnForm1"><img src="img/align-left.svg" alt="Infos">Texte</li>
+          <li id="btnForm2"><img src="img/business-suit.svg" alt="Styles">Style</li>
+        </ul>
+      </div>
+      <div class="formulaireContainer formTab" id="form1">
+        <!-- Formulaire principal -->
+        <h3>Informations principal</h3>
+        <label for="prenom">Prénom</label>
+        <input placeholder="Jean" type="text" id="prenom">
+        <label for="nom">Nom</label>
+        <input placeholder="Dupont" type="text" id="nom">
+        <label for="poste">Intitulé du poste</label>
+        <input placeholder="Développeur Web" type="text" id="poste">
+        <label for="entreprise">Entreprise</label>
+        <input placeholder="Le Bocal Academy" type="text" id="entreprise">
+        <label for="telephone">Téléphone</label>
+        <input placeholder="0741778936" type="text" id="telephone">
+        <label for="email">Email</label>
+        <input placeholder="jd@lebocal.fr" type="text" id="email">
+        <label for="siteWeb">Site Web</label>
+        <input placeholder="www.lebocal.fr" type="text" id="siteWeb">
+        <label for="adresse">Adresse</label>
+        <input placeholder="26 Rue Carabacel 06000 NICE" type="text" id="adresse">
+        <!-- Formulaire secondaire -->
+        <h3>Réseaux sociaux</h3>
+        <label for="linkedin">LinkedIn</label>
+        <input type="text" id="linkedin" placeholder="Champ vide pour supprimer icone">
+        <label for="facebook">Facebook</label>
+        <input type="text" id="facebook" placeholder="Champ vide pour supprimer icone">
+        <label for="twitter">Twitter</label>
+        <input type="text" id="twitter" placeholder="Champ vide pour supprimer icone">
+        <label for="instagram">Instagram</label>
+        <input type="text" id="instagram" placeholder="Champ vide pour supprimer icone">
+      </div>
+      <div class="styleContainer formTab" id="form2">
+        <!-- Style principal -->
+        <h3>Personnaliser la signature</h3>
+
+        <label for="photoProfil">Photo de profil</label>
+        <input type="text" id="photoProfil" placeholder="https://exemple.fr/img/photo.jpg">
+        <label for="couleurTheme">Couleur du texte principal</label>
+        <div class="inputStyle"><span style="font-size: 0.8em;">Hex </span><input type="text" id="inputTheme"><input
+            type="color" name="paletteTheme" id="paletteTheme"></div>
+        <label for="couleurTexte">Couleur du texte secondaire</label>
+        <div class="inputStyle"><span style="font-size: 0.8em;">Hex </span><input type="text" id="inputTexte"><input
+            type="color" name="paletteTexte" id="paletteTexte"></div>
+
+        <label for="couleurLien">Couleur des liens</label>
+        <div class="inputStyle"><span style="font-size: 0.8em;">Hex </span><input type="text" id="inputLien"><input
+            type="color" name="paletteLien" id="paletteLien" value="#006adb">
+        </div>
+
+        <label for="police">Police</label>
+        <select name="police" id="policeType">
+          <option value="opensans">Open Sans</option>
+          <option value="arial">Arial</option>
+          <option value="poppins">Poppins</option>
+          <option value="roboto">Roboto</option>
+          <option value="lato">Lato</option>
+          <option value="nunito">Nunito</option>
+        </select>
+        <label for="taillePolice">Taille de police</label>
+        <input type="range" name="taillePolice" id="taillePolice" min="1" max="3" step="1" list="tickmarks">
+        <datalist id="tickmarks">
+          <option value="1" label="Petite">
+          <option value="2" label="Moyenne">
+          <option value="3" label="Grande">
+        </datalist>
+      </div>
+
+    </div>
+    <div class="signatureContainer">
+      <div class="titre">
+        <h1>Generateur <br> <span>de signature</span></h1>
+      </div>
+      <div id="signature">
+        <div class="fenetre">
+          <div class="btnFenetreContainer">
+            <div class="btnFenetre b1"></div>
+            <div class="btnFenetre b2"></div>
+            <div class="btnFenetre b3"></div>
+          </div>
+          <div class="fenetreContent">
+            <p>À : <span>Votre destinataire</span></p>
+            <p>Objet : <span>Découvrez ma nouvelle signature d'e-mail</span></p>
+          </div>
+        </div>
+
+        <div class="tableSignature" id="tableSignature">
+          <table cellPadding="0" cellSpacing="0">
+            <tbody>
+              <tr><img id="photoProfilS" height="180px" style="margin-right: 15px; border-radius: 50%;"
+                  src="https://media.istockphoto.com/vectors/profile-icon-male-avatar-portrait-casual-person-vector-id530829213?k=6&m=530829213&s=170667a&w=0&h=D5Qm3KHxprqZSgCOESaQPAzBWOzIGucjjgnM_kU7qUU="
+                  alt=""></tr>
+              <tr>
+                <td style="vertical-align:top"></td>
+                <td>
+                  <div style="font-weight: bold; margin-bottom: 2px;"><span id="prenomS"></span> <span id="nomS"></span>
+                  </div>
+                  <div id="posteS" style="margin-bottom: 2px; font-size:0.9em;"></div>
+                  <div id="entrepriseS" style="margin-bottom: 5px;font-size:0.9em;"></div>
+                  <div
+                    style="font-size:0.9em;border-top:1px solid gray;min-width:250px;max-width:300px;margin-top:4px;padding-top:4px">
+
+                    <div><span style="margin-right:8px;"><a style="text-decoration: none;color: #006adb;"
+                          id="telephoneS" href="tel:"></a></span></div>
+
+                    <div><a style="text-decoration: none;color: #006adb;" id="emailS" href="mailto:"></a>
+                    </div>
+
+
+                    <div><a style="text-decoration: none;color: #006adb;" id="siteWebS" href="http://"></a></div>
+
+
+                    <div style="margin-bottom: 5px"><a style="text-decoration: none;color: #006adb;" id="adresseS"
+                        href=""></a></div>
+
+                    <div>
+                      <a id="linkedinS" href="" title="LinkedIn" style="margin-right:8px"><img
+                          src="https://www.getmailspring.com/signature-assets/linkedin.gif" width="18" height="18"
+                          alt="LinkedIn" /></a>
+
+
+                      <a id="facebookS" href="" title="Facebook" style="margin-right:8px"><img
+                          src="https://www.getmailspring.com/signature-assets/fb.gif" width="18" height="18"
+                          alt="Facebook" /></a>
+
+
+                      <a id="twitterS" href="" title="Twitter" style="margin-right:8px"><img
+                          src="https://www.getmailspring.com/signature-assets/twitter.gif" width="18" height="18"
+                          alt="Twitter"></a>
+
+
+                      <a id="instagramS" href="" title="Instagram" style="margin-right:8px"><img
+                          src="https://www.getmailspring.com/signature-assets/instagram.gif" width="18" height="18"
+                          alt="Instagram"></a>
+                    </div>
+                  </div>
+        </div>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="creerSignature">
+      <button id="creerSignature">Créer la signature</button>
+    </div>
+    <div class="displayNone" id="signCreer">
+
+    </div>
+  </div>
+  <script src="generSign.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
